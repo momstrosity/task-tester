@@ -36,5 +36,6 @@ def test_prime_factorization_invalid_inputs():
 def test_prime_factorization_performance():
     """Verify factorization works with a moderately large number."""
     result = prime_factorization(123456)
-    assert result == [2, 2, 2, 2, 2, 2, 1929]  # Verification of factors
+    assert result == [2, 2, 2, 2, 2, 2, 3, 643]  # Corrected prime factors
     assert len(result) > 1  # Ensure multiple factors
+    assert 2 ** 6 * 3 * 643 == 123456  # Verify the result reconstructs the original number
