@@ -61,6 +61,17 @@ def gcd(*numbers):
     # Convert to list and verify all are integers
     nums = list(numbers)
     
+    # Handle special zero cases
+    if 0 in nums:
+        nums = [num for num in nums if num != 0]
+        
+        # If only zeros were provided
+        if len(nums) == 0:
+            return 0
+        
+        # Return largest absolute non-zero number
+        return abs(max(nums, key=abs))
+    
     # Handle single number case
     if len(nums) == 1:
         return abs(nums[0])
