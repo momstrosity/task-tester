@@ -1,6 +1,6 @@
 def reverse_string(input_string: str) -> str:
     """
-    Reverse the given input string.
+    Reverse the given input string using manual character manipulation.
 
     Args:
         input_string (str): The string to be reversed.
@@ -15,5 +15,19 @@ def reverse_string(input_string: str) -> str:
     if not isinstance(input_string, str):
         raise TypeError("Input must be a string")
     
-    # Reverse the string using slicing
-    return input_string[::-1]
+    # Convert string to list for manipulation
+    chars = list(input_string)
+    
+    # Use two-pointer technique to swap characters
+    left, right = 0, len(chars) - 1
+    
+    while left < right:
+        # Swap characters from both ends
+        chars[left], chars[right] = chars[right], chars[left]
+        
+        # Move pointers towards the center
+        left += 1
+        right -= 1
+    
+    # Convert back to string and return
+    return ''.join(chars)
