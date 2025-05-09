@@ -10,6 +10,10 @@ def test_reverse_string_empty():
     """Test reversal of an empty string."""
     assert reverse_string("") == ""
 
+def test_reverse_string_with_spaces():
+    """Test reversal of strings with spaces."""
+    assert reverse_string("hello world") == "dlrow olleh"
+
 def test_reverse_string_special_chars():
     """Test reversal of strings with special characters."""
     assert reverse_string("a!b@c#") == "#c@b!a"
@@ -18,9 +22,9 @@ def test_reverse_string_unicode():
     """Test reversal of unicode strings."""
     assert reverse_string("こんにちは") == "はちにんこ"
 
-def test_reverse_string_with_spaces():
-    """Test reversal of strings with spaces."""
-    assert reverse_string("hello world") == "dlrow olleh"
+def test_reverse_string_mixed_chars():
+    """Test reversal of strings with mixed character types."""
+    assert reverse_string("Hello, World! 123") == "321 !dlroW ,olleH"
 
 def test_reverse_string_invalid_input():
     """Test that a TypeError is raised for non-string inputs."""
