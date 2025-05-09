@@ -21,6 +21,10 @@ def test_reverse_with_unicode():
     """Test reversing a string with unicode characters."""
     assert reverse_string("こんにちは") == "はちにんこ"
 
+def test_reverse_with_mixed_characters():
+    """Test reversing a string with mixed character types."""
+    assert reverse_string("Hello, World! 123") == "321 !dlroW ,olleH"
+
 def test_raise_type_error_for_non_string():
     """Test that a TypeError is raised for non-string inputs."""
     with pytest.raises(TypeError, match="Input must be a string"):
