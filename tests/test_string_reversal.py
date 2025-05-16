@@ -36,4 +36,4 @@ def test_reverse_string_non_string_input():
     with pytest.raises(TypeError, match="Input must be a string"):
         reverse_string(12345)
     with pytest.raises(TypeError, match="Input must be a string"):
-        reverse_string(["hello"])
+        reverse_string(["hello"]))
