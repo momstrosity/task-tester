@@ -21,6 +21,10 @@ def test_reverse_string_with_special_chars():
     """Test reversal of a string with special characters."""
     assert reverse_string("a!b@c#") == "#c@b!a"
 
+def test_reverse_string_mixed_chars():
+    """Test reversal of a string with mixed characters."""
+    assert reverse_string("Hello, World! 123") == "321 !dlroW ,olleH"
+
 def test_reverse_string_unicode():
     """Test reversal of a string with unicode characters."""
     assert reverse_string("こんにちは") == "はちにんこ"
